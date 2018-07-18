@@ -6,8 +6,8 @@ const person = {
     hairColor: "Brown",
     height: `6'2"`,
     weight: "180lbs",
-    family: [Edith, ]
 }
+
 
 // var objects = [
 // {object1},
