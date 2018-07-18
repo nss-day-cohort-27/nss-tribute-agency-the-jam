@@ -1,70 +1,67 @@
-const fragment = document.createDocumentFragment();
 
-//////////////////////  Database Array
+//////////////////////  Database Const
 
 const career = {}
 
-career.intro = []
-career.skills = []
-career.published = []
-career.residence = []
-career.collaborators = []
-career.awards = []
+//////////////////////  Array - Intro
 
-//////////////////////  Array Objects - Intro
+career.intro = [
+    {
+        name: "Dewey Cox",
+        description: "He does a lot of good arts, and makes all the people's happy."
+    }
+]
 
-const artistIntro = {
-    name: "Dewey Cox",
-    description: "He does a lot of good arts, and makes all the people's happy."
-}
+//////////////////////  Array - Skills
 
-//////////////////////  Array Objects - Skills
-
-const fireJuggling = {
+career.skills = [
+    {
     name: "Fire Juggling",
     description: "Master of the flaming baton."
-}
+    }
+]
+//////////////////////  Array - Published
 
-//////////////////////  Array Objects - Published
-
-const hotterSun = {
+career.published = [
+    {
     name: "Hotter than the Sun",
     description: "Best-selling novel about recovering from a tragic fire-swallowing trick."
-}
+    }
+]
 
-//////////////////////  Array Objects - Residence
+//////////////////////  Array - Residence
 
-const beachHouse = {
+career.residence = [
+    {
     name: "Hawaii Beachside Property",
-    description: "A small shack on the coast of x"
-}
+    description: "A small shack on the coast of Maui.",
+    beginTime: "1988",
+    endTime: "2001"
+    }
+]
 
-//////////////////////  Array Objects - Collaborators
+//////////////////////  Array - Collaborators
 
-const joanRivera = {
+career.collaborators = [
+    {
     name: "Joan Rivera",
     description: "Scandal artist that boosted his career with badmouthing and smut-stirring."
-}
+    }
+]
 
-//////////////////////  Array Objects - Awards
+//////////////////////  Array - Awards
 
-const woody = {
+career.awards = [
+    {
     name: "Woody for Best Erotic Album",
     description: "Dewey won this award for his chart-topping album, 'Going down, Getting rough'"
-}
+    }
+]
 
-//////////////////////  Push Objects into Array
 
-career.intro.push(artistIntro);
-career.skills.push(fireJuggling);
-career.published.push(hotterSun);
-career.residence.push(beachHouse);
-career.collaborators.push(joanRivera);
-career.awards.push(woody);
-
-var careerArtist = document.createElement("article");
-careerArtist.innerHTML = career;
-fragment.appendChild(careerArtist)
+var careerIntro = document.createElement("section");
+careerIntro.innerHTML = career.intro;
+fragment.appendChild(careerIntro)
 
 document.querySelector("article").appendChild(fragment);
 
