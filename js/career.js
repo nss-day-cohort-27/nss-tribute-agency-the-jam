@@ -1,3 +1,5 @@
+const fragment = document.createDocumentFragment();
+
 //////////////////////  Database Array
 
 const career = {}
@@ -59,5 +61,11 @@ career.published.push(hotterSun);
 career.residence.push(beachHouse);
 career.collaborators.push(joanRivera);
 career.awards.push(woody);
+
+var careerArtist = document.createElement("article");
+careerArtist.innerHTML = career;
+fragment.appendChild(careerArtist)
+
+document.querySelector("article").appendChild(fragment);
 
 console.log(career)
