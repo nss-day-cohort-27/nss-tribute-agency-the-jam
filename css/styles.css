@@ -1,1 +1,12 @@
 /* Styles */
+
+#personalFlex {
+    background-color: black;
+}
+
+.personalImage{
+    background-color:  White;
+}
+.personalInfo{
+    background-color: lightskyblue;
+}
