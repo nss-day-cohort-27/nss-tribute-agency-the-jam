@@ -58,11 +58,19 @@ career.awards = [
     }
 ]
 
+const saveCareerData = function (databaseObject, localStorageKey) {
+    const stringifiedCareerData = JSON.stringify (databaseObject)
+    localStorage.setItem(localStorageKey, stringifiedCareerData)
+}
 
-var careerIntro = document.createElement("section");
-careerIntro.innerHTML = career.intro;
-fragment.appendChild(careerIntro)
+const loadCareerData = function (localStorageKey) {
+    const careerDataString = localStorage.getItem(localStorageKey)
+    return JSON.parse(careerDataString)
+}
 
-document.querySelector("article").appendChild(fragment);
+saveCareerData(career, "Career")
+
+loadCareerData("Career")
+
 
 console.log(career)
