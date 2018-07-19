@@ -1,37 +1,48 @@
 
-const summaryData = {}
+const summaryData = {
 
+"collaborators": [
+{
+    name: "Joe Blow",
+    hometown: "Hopkinsville, KY",
+    age: "56"
+},
+ {   name: "Susie Queue",
+     hometown: "Clarksville, TN",
+     age: "48" 
+},
+{
+ name: "Mr. Trex",
+ hometown: "Oak Grove, KY",
+ age: "41"
+}
 
-////////////////// Database
-
-
-summaryData.collaborators = [
-    {name: "Joe Blow",
-     age: "29"
+],
+"aliases": [
+    {
+    name: "Sammy-2Face",
     },
-    {name: "Susie Q"
-
+    {
+    name: "Low-Blow-Joe"
     }
-
-]
-summaryData.aliases=[
+],
+"residence": [
     {
-    name: "Sammy-2Face"
-    },
-    {
-    name: "Low-Blow"
-    }
-]
-summaryData.residence=[
-    {
+        when: "raised in: ",
+        state: "Kentucky",
         country: "United States"
+    },
+    {
+        when: "currently",
+        state: "buried",
+        country: "underground"
+
     }
 ]
+}
 
 
-console.log(summaryData)
-
-// Persist the database to localStorage
+// Send data to localStorage
 
 
 const saveSummary = function (databaseObject, localStorageKey) {
@@ -55,11 +66,32 @@ const loadSummary = function (localStorageKey) {
     return JSON.parse(summaryString)
 }
 
-saveSummary(summaryData, "Summary Data")
+saveSummary(summaryData, "SummaryData")
 
-const summaryJsonData = loadSummary("Summary Data")
+const summaryJsonData = loadSummary("SummaryData")
 
 
 // document.write(JSON.localStorage.summaryData.stringifiedSummaryData)
 
-var summaryArt1 = document.getElementsByClassName(sumar)
+let artsummary = document.getElementsByClassName("summaryArticle")[0]
+let sumryart = summaryJsonData 
+
+console.log(summaryData)
+console.log(sumryart.collaborators.length)
+
+for(let i = 0; i < sumryart.collaborators.length; i++){
+    let h3 = document.createElement("h3");
+    h3.innerHTML = sumryart.collaborators[i].name + ", " + sumryart.collaborators[i].age + ", of " + sumryart.collaborators[i].hometown
+    artsummary.appendChild(h3);
+}
+
+let sumAlias = document.getElementsByClassName("aliases")[0]
+
+console.log(sumryart.aliases.length)
+console.log()
+
+for(let i = 0; i < sumryart.aliases.length; i++){
+    let h3 = document.createElement("h3");
+    h3.innerHTML = sumryart.aliases[i].name 
+    sumAlias.appendChild(h3);
+}
