@@ -141,11 +141,19 @@ var artistPubTitleJson = careerJSONData.pubTitle;
 artistPublished.innerHTML+=`
 <h2>${artistPubTitleJson}</h2>`
 
-for(var i = 0; i < artistPubJson.length; i++) {
+let finalStructure = "<div class='row'>"
 
+for(var i = 0; i < artistPubJson.length; i++) {
+    if (i % 2 === 0) {
+        finalStructure += "</div>"
+        finalStructure += "<div class='row'>"
+        finalStructure += "</div>"
+    }
     artistPublished.innerHTML+=`
+    <div class = "col-6">
     <h4>${artistPubJson[i].name}</h4>
-    <img src="images/${artistPubJson[i].img}">`
+    <img src="images/${artistPubJson[i].img}" width="250px" height="250px">
+    </div>`
 
 }
 
