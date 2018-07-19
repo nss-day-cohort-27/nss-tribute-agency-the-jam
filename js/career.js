@@ -63,7 +63,7 @@ collaborators: [
 
 //////////////////////  Array - Awards
 
-awardTitle: "Freakin' Awesome Awards",
+awardTitle: "Freakin' Amazing Awards",
 
 awards: [
     "Grammy for Best Album - 'Black Sheep'",
@@ -97,8 +97,8 @@ for(var i = 0; i < artistIntroJson.length; i++) {
     let currentItem = artistIntroJson[i];
 
     artistIntro.innerHTML+=`
-    <h1 class="header">${currentItem.name}</h1>
-    <h4>${currentItem.description}</h4>`
+    <h1 class="introTitle">${currentItem.name}</h1>
+    <h4 class="introBody">${currentItem.description}</h4>`
 
 }
 
@@ -109,14 +109,14 @@ var artistSkillsJson = careerJSONData.skills;
 var artistSkillsTitleJson = careerJSONData.skillTitle;
 
 artistSkills.innerHTML+=`
-<h2 class="header">${artistSkillsTitleJson}</h2>`
+<h2 class="skillsTitle">${artistSkillsTitleJson}</h2>`
 
 for(var i = 0; i < artistSkillsJson.length; i++) {
 
     let skillsItem = artistSkillsJson[i];
 
     artistSkills.innerHTML+=`
-    <h4 class="header">${skillsItem}</h4>`
+    <h4 class="skillsBody">${skillsItem}</h4>`
 
 }
 
@@ -127,7 +127,7 @@ var artistPubJson = careerJSONData.published;
 var artistPubTitleJson = careerJSONData.pubTitle;
 
 artistPublished.innerHTML+=`
-<h2 class="header">${artistPubTitleJson}</h2>`
+<h2 class="pubTitle">${artistPubTitleJson}</h2>`
 
 for(var i = 0; i < artistPubJson.length; i++) {
 
@@ -135,7 +135,7 @@ for(var i = 0; i < artistPubJson.length; i++) {
     let pubItem = artistPubJson[i];
 
     artistPublished.innerHTML+=`
-    <h4 class="header">${pubItem}</h4>`
+    <h4 class="pubBody">${pubItem}</h4>`
 
 }
 
