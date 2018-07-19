@@ -18,6 +18,5 @@ let newStuff = getJSON("personJSON")
 
 console.log(newStuff)
 
-newStuff.items.forEach(post => {
-    console.log(post)
-});
+document.getElementById("preview").innerHTML = newStuff.summary
+document.getElementById("hidden").innerHTML = `Born: ${newStuff.born} in ${newStuff.birthPlace} <br> Birth Name: ${newStuff.name} <br> Died: ${died} <br> `

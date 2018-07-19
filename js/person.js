@@ -1,11 +1,11 @@
 const person = {
+    summary: "Following a childhood tragedy, Dewey Cox started a long and winding road to music stardom. Perseverving through changing musical styles, an addiction to nearly every drug known and bouts of uncontrollable rage.",
     born: "1936",
     birthPlace: "Springberry, Alabama,",
     name: "Dewford Randolph Cox",
     died: "2007",
-    hairColor: "Brown",
-    height: `6'2"`,
-    weight: "180lbs",
+    currentCountry: "United States of Ameria",
+    Family: ["Pa Cox", ]
 }
 
 
