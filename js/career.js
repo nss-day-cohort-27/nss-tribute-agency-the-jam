@@ -40,18 +40,15 @@ resTitle: "Places of Residence",
 residence: [
     {
     name: "Springberry, Alabama",
-    beginTime: "1946",
-    endTime: "1953"
+    beginEnd: "1946-1953"
     },
     {
     name: "Nashville, Tennessee",
-    beginTime: "1954",
-    endTime: "1965"
+    beginEnd: "1954-1965"
     },
     {
     name: "Berkeley, California",
-    beginTime: "1966",
-    endTime: "2002"
+    beginEnd: "1966-2002"
     }
 ],
 
@@ -90,32 +87,19 @@ saveCareerData(career, "Career")
 
 const careerJSONData = loadCareerData("Career")
 
-console.log(careerJSONData)
-
 //////////////////////  Populate HTML w/JSON.intro
 
 var artistIntro = document.getElementsByClassName("intro")[0];
 var artistIntroJson = careerJSONData.intro;
 
-console.log(artistIntroJson)
-
 for(var i = 0; i < artistIntroJson.length; i++) {
 
     let currentItem = artistIntroJson[i];
 
-    console.log(currentItem)
-
     artistIntro.innerHTML+=`
-    <h4 class="header">${currentItem.name}</h4>
-    <p>${currentItem.description}</p>`
+    <h1 class="header">${currentItem.name}</h1>
+    <h4>${currentItem.description}</h4>`
 
-    // var introName = document.createElement("h4");
-    // introName.innerHTML = `${currentItem.name}`
-    // artistIntro.appendChild(introName);
-
-    // var introDescription = document.createElement("p");
-    // introDescription.innerHTML = artistIntroJson[i].description;
-    // artistIntro.appendChild(introDescription);
 }
 
 //////////////////////  Populate HTML w/JSON.skills
@@ -124,8 +108,6 @@ var artistSkills = document.querySelector(".skills");
 var artistSkillsJson = careerJSONData.skills;
 var artistSkillsTitleJson = careerJSONData.skillTitle;
 
-console.log(artistSkillsTitleJson)
-
 artistSkills.innerHTML+=`
 <h2 class="header">${artistSkillsTitleJson}</h2>`
 
@@ -133,14 +115,8 @@ for(var i = 0; i < artistSkillsJson.length; i++) {
 
     let skillsItem = artistSkillsJson[i];
 
-    console.log(skillsItem)
-
     artistSkills.innerHTML+=`
     <h4 class="header">${skillsItem}</h4>`
-
-    // var skills123 = document.createElement("h4");
-    // skills123.innerHTML = artistSkillsJson[i].skills;
-    // artistSkills.appendChild(skills123);
 
 }
 
@@ -158,14 +134,8 @@ for(var i = 0; i < artistPubJson.length; i++) {
     
     let pubItem = artistPubJson[i];
 
-    console.log(pubItem)
-
     artistPublished.innerHTML+=`
     <h4 class="header">${pubItem}</h4>`
-
-    // var albums1234 = document.createElement("h4");
-    // albums1234.innerHTML = artistPubJson[i].albums;
-    // artistPublished.appendChild(albums1234);
 
 }
 
@@ -185,13 +155,9 @@ for(var i = 0; i < artistResJson.length; i++) {
     resName.innerHTML = artistResJson[i].name;
     artistResidence.appendChild(resName);
 
-    var resBegin = document.createElement("p");
-    resBegin.innerHTML = artistResJson[i].beginTime;
-    artistResidence.appendChild(resBegin);
-
-    var resEnd = document.createElement("p");
-    resEnd.innerHTML = artistResJson[i].endTime;
-    artistResidence.appendChild(resEnd);
+    var resBeginEnd = document.createElement("h6");
+    resBeginEnd.innerHTML = artistResJson[i].beginEnd;
+    artistResidence.appendChild(resBeginEnd);
 
 }
 
@@ -207,10 +173,7 @@ artistCollab.innerHTML+=`
 
 for(var i = 0; i < artistCollabJson.length; i++) {
 
-
     let collabItem = artistCollabJson[i];
-
-    console.log(collabItem)
 
     artistCollab.innerHTML+=`
     <h4 class="header">${collabItem}</h4>`
@@ -229,8 +192,6 @@ artistAwards.innerHTML+=`
 for(var i = 0; i < artistAwardsJson.length; i++) {
 
     let awardsItem = artistAwardsJson[i];
-
-    console.log(awardsItem)
 
     artistAwards.innerHTML+=`
     <h4 class="header">${awardsItem}</h4>`
