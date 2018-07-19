@@ -5,7 +5,7 @@ const career = {
 
 //////////////////////  Array - Intro
 
-"intro": [
+intro: [
     {
         name: "Dewey Cox",
         description: "He does a lot of good arts, and makes all the people's happy."
@@ -16,28 +16,28 @@ const career = {
 
 skillTitle: "Totally Awesome Skills",
 
-"skills": [
-    skill1 = "Singing",
-    skill2 = "Playing guitar",
-    skill3 = "Walking hard"
+skills: [
+    "Singing",
+    "Playing guitar",
+    "Walking hard"
 ],
 
 //////////////////////  Array - Published
 
 pubTitle: "Published Works",
 
-"published": [
-    album1 = "Walk Hard",
-    album2 = "Black Sheep",
-    album3 = "(For Christmas) The People Want Cox",
-    album4 = "Let's Duet"
+published: [
+    "Walk Hard",
+    "Black Sheep",
+    "(For Christmas) The People Want Cox",
+    "Let's Duet"
 ],
 
 //////////////////////  Array - Residence
 
 resTitle: "Places of Residence",
 
-"residence": [
+residence: [
     {
     name: "Springberry, Alabama",
     beginTime: "1946",
@@ -59,18 +59,18 @@ resTitle: "Places of Residence",
 
 collabTitle: "Known Collaborators",
 
-"collaborators": [
-    collab1 = "Darlene Madison",
-    collab2 = "Sam"
+collaborators: [
+    "Darlene Madison",
+    "Sam"
 ],
 
 //////////////////////  Array - Awards
 
 awardTitle: "Freakin' Awesome Awards",
 
-"awards": [
-    award1 = "Grammy for Best Album - 'Black Sheep'",
-    award2 = "Grammy for Best Single - 'Walk Hard'"
+awards: [
+    "Grammy for Best Album - 'Black Sheep'",
+    "Grammy for Best Single - 'Walk Hard'"
 ]
 }
 
@@ -90,20 +90,32 @@ saveCareerData(career, "Career")
 
 const careerJSONData = loadCareerData("Career")
 
+console.log(careerJSONData)
+
 //////////////////////  Populate HTML w/JSON.intro
 
 var artistIntro = document.getElementsByClassName("intro")[0];
 var artistIntroJson = careerJSONData.intro;
 
+console.log(artistIntroJson)
+
 for(var i = 0; i < artistIntroJson.length; i++) {
 
-    var introName = document.createElement("h4");
-    introName.innerHTML = artistIntroJson[i].name;
-    artistIntro.appendChild(introName);
+    let currentItem = artistIntroJson[i];
 
-    var introDescription = document.createElement("p");
-    introDescription.innerHTML = artistIntroJson[i].description;
-    artistIntro.appendChild(introDescription);
+    console.log(currentItem)
+
+    artistIntro.innerHTML+=`
+    <h4 class="header">${currentItem.name}</h4>
+    <p>${currentItem.description}</p>`
+
+    // var introName = document.createElement("h4");
+    // introName.innerHTML = `${currentItem.name}`
+    // artistIntro.appendChild(introName);
+
+    // var introDescription = document.createElement("p");
+    // introDescription.innerHTML = artistIntroJson[i].description;
+    // artistIntro.appendChild(introDescription);
 }
 
 //////////////////////  Populate HTML w/JSON.skills
@@ -117,14 +129,10 @@ artistSkills.appendChild(skillsTitle);
 
 for(var i = 0; i < artistSkillsJson.length; i++) {
 
+    var skills123 = document.createElement("h4");
+    skills123.innerHTML = artistSkillsJson[i].skills;
+    artistSkills.appendChild(skills123);
 
-    var skillsFireName = document.createElement("h4");
-    skillsFireName.innerHTML = artistSkillsJson[i].name;
-    artistIntro.appendChild(skillsFireName);
-
-    var skillsFireDescription = document.createElement("p");
-    skillsFireDescription.innerHTML = artistSkillsJson[i].description;
-    artistIntro.appendChild(skillsFireDescription);
 }
 
 //////////////////////  Populate HTML w/JSON.published
@@ -139,13 +147,10 @@ artistPublished.appendChild(publishedTitle);
 for(var i = 0; i < artistPubJson.length; i++) {
 
 
-    var publishedNameHotter = document.createElement("h4");
-    publishedNameHotter.innerHTML = artistPubJson[i].name;
-    artistPublished.appendChild(publishedNameHotter);
+    var albums1234 = document.createElement("h4");
+    albums1234.innerHTML = artistPubJson[i].albums;
+    artistPublished.appendChild(albums1234);
 
-    var publishedDescriptionHotter = document.createElement("p");
-    publishedDescriptionHotter.innerHTML = artistPubJson[i].description;
-    artistPublished.appendChild(publishedDescriptionHotter);
 }
 
 //////////////////////  Populate HTML w/JSON.residence
@@ -160,13 +165,18 @@ artistResidence.appendChild(residenceTitle);
 for(var i = 0; i < artistResJson.length; i++) {
 
 
-    var resMauiName = document.createElement("h4");
-    resMauiName.innerHTML = artistResJson[i].name;
-    artistResidence.appendChild(resMauiName);
+    var resName = document.createElement("h4");
+    resName.innerHTML = artistResJson[i].name;
+    artistResidence.appendChild(resName);
 
-    var resMauiDescription = document.createElement("p");
-    resMauiDescription.innerHTML = artistResJson[i].description;
-    artistResidence.appendChild(resMauiDescription);
+    var resBegin = document.createElement("p");
+    resBegin.innerHTML = artistResJson[i].beginTime;
+    artistResidence.appendChild(resBegin);
+
+    var resEnd = document.createElement("p");
+    resEnd.innerHTML = artistResJson[i].endTime;
+    artistResidence.appendChild(resEnd);
+
 }
 
 //////////////////////  Populate HTML w/JSON.collaborators
@@ -181,34 +191,27 @@ artistCollab.appendChild(collaboratorsTitle);
 for(var i = 0; i < artistCollabJson.length; i++) {
 
 
-    var collabJoanName = document.createElement("h4");
-    collabJoanName.innerHTML = artistCollabJson[i].name;
-    artistCollab.appendChild(collabJoanName);
+    var collaborator12 = document.createElement("h4");
+    collaborator12.innerHTML = artistCollabJson[i].collaborators;
+    artistCollab.appendChild(collaborator12);
 
-    var collabJoanDescription = document.createElement("p");
-    collabJoanDescription.innerHTML = artistCollabJson[i].description;
-    artistCollab.appendChild(collabJoanDescription);
 }
 
 //////////////////////  Populate HTML w/JSON.awards
 
 var artistAwards = document.getElementsByClassName("awards")[0];
-var artistAwardsJson = careerJSONData.awardTitle;
+var artistAwardsJson = careerJSONData.awards;
 
 var awardsTitle = document.createElement("h2");
-awardsTitle.innerHTML = artistAwardsJson.title;
+awardsTitle.innerHTML = artistAwardsJson.awardTitle;
 artistAwards.appendChild(awardsTitle);
 
 for(var i = 0; i < artistAwardsJson.length; i++) {
 
-
-    var awardsWoodyName = document.createElement("h4");
-    awardsWoodyName.innerHTML = artistAwardsJson[i].name;
-    artistAwards.appendChild(awardsWoodyName);
-
-    var awardsWoodyDescription = document.createElement("p");
-    awardsWoodyDescription.innerHTML = artistAwardsJson[i].description;
-    artistAwards.appendChild(awardsWoodyDescription);
+    var awards12 = document.createElement("h4");
+    awards12.innerHTML = artistAwardsJson[i].awards;
+    artistAwards.appendChild(awards12);
+   
 }
 
 
