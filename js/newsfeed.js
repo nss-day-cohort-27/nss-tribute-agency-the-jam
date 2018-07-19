@@ -65,7 +65,7 @@ for(var i = 0; i < items.length; i++) {
     var h2 = document.createElement("h2");
     h2.innerHTML = items[i].event;
     newsRecap.appendChild(h2);
-    h2.className="eventHead, jumbotron jumbotron-fluid"
+    h2.className="eventHead, jumbotron jumbotron-fluid";
 
     var p = document.createElement("p");
     p.className="newsP, lead"
