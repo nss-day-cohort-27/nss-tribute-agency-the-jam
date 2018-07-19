@@ -4,8 +4,8 @@ const person = {
     birthPlace: "Springberry, Alabama,",
     name: "Dewford Randolph Cox",
     died: "2007",
-    currentCountry: "United States of Ameria",
-    Family: ["Pa Cox", ]
+    currentCountry: "United States of America",
+    family: ["Pa Cox", "Ma Cox", "Edith Cox", "Darlene Madison", "Cheryl Tiegs"],
 }
 
 

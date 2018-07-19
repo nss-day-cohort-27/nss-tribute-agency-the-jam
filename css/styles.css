@@ -7,9 +7,26 @@
     background-color: grey;
 } */
 
-#personalFlex {
-    background-color: black;
+#personalMain {
+    border: black solid 2px;
 }
-.personalInfo{
-    background-color: lightskyblue;
+.personalCard {
+    border: red solid 2px;
+}
+
+.personalFlex {
+    display: flex;
+    justify-content: space-around;
+}
+/* .box {
+    background-color: black;
+    height: 200px;
+    width: 200px;
+} */
+.personalImg {
+    display: block;
+    margin: auto;
+}
+.personalName{
+    text-align: center;
 }
