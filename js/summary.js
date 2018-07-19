@@ -33,7 +33,7 @@ const summaryData = {
         country: "United States"
     },
     {
-        when: "currently",
+        when: "currently:",
         state: "buried",
         country: "underground"
 
@@ -80,9 +80,9 @@ console.log(summaryData)
 console.log(sumryart.collaborators.length)
 
 for(let i = 0; i < sumryart.collaborators.length; i++){
-    let h3 = document.createElement("h3");
-    h3.innerHTML = sumryart.collaborators[i].name + ", " + sumryart.collaborators[i].age + ", of " + sumryart.collaborators[i].hometown
-    artsummary.appendChild(h3);
+    let h5 = document.createElement("h5");
+    h5.innerHTML = sumryart.collaborators[i].name + ", " + sumryart.collaborators[i].age + ", of " + sumryart.collaborators[i].hometown
+    artsummary.appendChild(h5)
 }
 
 let sumAlias = document.getElementsByClassName("aliases")[0]
@@ -91,7 +91,16 @@ console.log(sumryart.aliases.length)
 console.log()
 
 for(let i = 0; i < sumryart.aliases.length; i++){
-    let h3 = document.createElement("h3");
-    h3.innerHTML = sumryart.aliases[i].name 
-    sumAlias.appendChild(h3);
+    let h5 = document.createElement("h5");
+    h5.innerHTML = sumryart.aliases[i].name 
+    sumAlias.appendChild(h5);
 }
+
+let sumResidence = document.getElementsByClassName("residence")[0]
+console.log(sumryart.residence.length)
+
+    for(let i = 0; i< sumryart.residence.length; i++){
+        let h5 = document.createElement("h5");
+        h5.innerHTML = sumryart.residence[i].when + ", " + sumryart.residence[i].state + ", " + sumryart.residence[i].country
+        sumResidence.appendChild(h5)
+    }
