@@ -62,3 +62,4 @@ const summaryJsonData = loadSummary("Summary Data")
 
 // document.write(JSON.localStorage.summaryData.stringifiedSummaryData)
 
+var summaryArt1 = document.getElementsByClassName(sumar)
