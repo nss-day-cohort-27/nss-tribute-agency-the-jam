@@ -8,7 +8,7 @@ const career = {
 intro: [
     {
         name: "Dewey Cox",
-        description: "He does a lot of good arts, and makes all the people's happy."
+        description: "He does a lot of good arts, and makes all the peoples happy."
     }
 ],
 
@@ -109,8 +109,8 @@ for(var i = 0; i < artistIntroJson.length; i++) {
     let currentItem = artistIntroJson[i];
 
     artistIntro.innerHTML+=`
-    <h1 class="introTitle">${currentItem.name}</h1>
-    <h4 class="introBody">${currentItem.description}</h4>`
+    <h1>${currentItem.name}</h1>
+    <h4>${currentItem.description}</h4>`
 
 }
 
@@ -128,7 +128,7 @@ for(var i = 0; i < artistSkillsJson.length; i++) {
     let skillsItem = artistSkillsJson[i];
 
     artistSkills.innerHTML+=`
-    <h4 class="skillsBody">${skillsItem}</h4>`
+    <h4>${skillsItem}</h4>`
 
 }
 
@@ -139,12 +139,12 @@ var artistPubJson = careerJSONData.published;
 var artistPubTitleJson = careerJSONData.pubTitle;
 
 artistPublished.innerHTML+=`
-<h2 class="pubTitle">${artistPubTitleJson}</h2>`
+<h2>${artistPubTitleJson}</h2>`
 
 for(var i = 0; i < artistPubJson.length; i++) {
 
     artistPublished.innerHTML+=`
-    <h4 class="pubBody">${artistPubJson[i].name}</h4>
+    <h4>${artistPubJson[i].name}</h4>
     <img src="images/${artistPubJson[i].img}">`
 
 }
@@ -156,7 +156,7 @@ var artistResJson = careerJSONData.residence;
 var artistResTitleJson = careerJSONData.resTitle;
 
 artistResidence.innerHTML+=`
-<h2 class="header">${artistResTitleJson}</h2>`
+<h2>${artistResTitleJson}</h2>`
 
 for(var i = 0; i < artistResJson.length; i++) {
 
@@ -178,7 +178,7 @@ var artistCollabJson = careerJSONData.collaborators;
 var artistCollabTitleJson = careerJSONData.collabTitle;
 
 artistCollab.innerHTML+=`
-<h2 class="header">${artistCollabTitleJson}</h2>`
+<h2>${artistCollabTitleJson}</h2>`
 
 
 for(var i = 0; i < artistCollabJson.length; i++) {
@@ -186,7 +186,7 @@ for(var i = 0; i < artistCollabJson.length; i++) {
     let collabItem = artistCollabJson[i];
 
     artistCollab.innerHTML+=`
-    <h4 class="header">${collabItem}</h4>`
+    <h4>${collabItem}</h4>`
 
 }
 
@@ -197,14 +197,14 @@ var artistAwardsJson = careerJSONData.awards;
 var artistAwardsTitleJson = careerJSONData.awardTitle;
 
 artistAwards.innerHTML+=`
-<h2 class="header">${artistAwardsTitleJson}</h2>`
+<h2>${artistAwardsTitleJson}</h2>`
 
 for(var i = 0; i < artistAwardsJson.length; i++) {
 
     let awardsItem = artistAwardsJson[i];
 
     artistAwards.innerHTML+=`
-    <h4 class="header">${awardsItem}</h4>`
+    <h4>${awardsItem}</h4>`
    
 }
 
