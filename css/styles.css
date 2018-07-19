@@ -1,14 +1,10 @@
 /* Styles */
-
-/* .personalFlexContain {
-    width: 80%;
-    margin: auto;
-    justify-items: center;
-    background-color: grey;
-} */
-
 #personalMain {
     border: black solid 2px;
+}
+
+.bgImage{
+    background-image: url("../images/woodbg.png");
 }
 .personalCard {
     border: red solid 2px;
@@ -18,17 +14,22 @@
     display: flex;
     justify-content: space-around;
 }
-/* .box {
-    background-color: black;
-    height: 200px;
-    width: 200px;
-} */
+
 .personalImg {
     display: block;
     margin: auto;
 }
+
 .personalName{
     text-align: center;
+}
+
+.personalCardColor{
+    background-color: white;
+    margin: 1em;
+    padding: .5em;
+}
+
 .eventHead {
     border: blue solid 4px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
