@@ -65,14 +65,21 @@ for(var i = 0; i < items.length; i++) {
     var h2 = document.createElement("h2");
     h2.innerHTML = items[i].event;
     newsRecap.appendChild(h2);
-    var dateP = document.createElement("p");
-    newsP.className="newsP"
+    h2.className="eventHead, jumbotron jumbotron-fluid"
 
-    dateP.innerHTML = items[i].dateP;
+    var p = document.createElement("p");
+    p.className="newsP, lead"
+    p.innerHTML = items[i].date;
     newsRecap.appendChild(p);
-    var ratingP = document.createElement("p");
 
-    ratingP.className="newsP"
-    ratingP.innerHTML = items[i].ratingP;
+    var p = document.createElement("p");
+    p.className="newsP, my-4"
+    p.innerHTML = items[i].location;
+    newsRecap.appendChild(p);
+
+    var p = document.createElement("p");
+    p.className="newsP, my-4"
+    p.innerHTML = items[i].type;
     newsRecap.appendChild(p);
 }
+
