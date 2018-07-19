@@ -14,49 +14,63 @@ const career = {
 
 //////////////////////  Array - Skills
 
+skillTitle: "Totally Awesome Skills",
+
 "skills": [
-    {
-    name: "Fire Juggling",
-    description: "Master of the flaming baton."
-    }
+    skill1 = "Singing",
+    skill2 = "Playing guitar",
+    skill3 = "Walking hard"
 ],
 
 //////////////////////  Array - Published
 
+pubTitle: "Published Works",
+
 "published": [
-    {
-    name: "Hotter than the Sun",
-    description: "Best-selling novel about recovering from a tragic fire-swallowing trick."
-    }
+    album1 = "Walk Hard",
+    album2 = "Black Sheep",
+    album3 = "(For Christmas) The People Want Cox",
+    album4 = "Let's Duet"
 ],
 
 //////////////////////  Array - Residence
 
+resTitle: "Places of Residence",
+
 "residence": [
     {
-    name: "Hawaii Beachside Property",
-    description: "A small shack on the coast of Maui.",
-    beginTime: "1988",
-    endTime: "2001"
+    name: "Springberry, Alabama",
+    beginTime: "1946",
+    endTime: "1953"
+    },
+    {
+    name: "Nashville, Tennessee",
+    beginTime: "1954",
+    endTime: "1965"
+    },
+    {
+    name: "Berkeley, California",
+    beginTime: "1966",
+    endTime: "2002"
     }
 ],
 
 //////////////////////  Array - Collaborators
 
+collabTitle: "Known Collaborators",
+
 "collaborators": [
-    {
-    name: "Joan Rivera",
-    description: "Scandal artist that boosted his career with badmouthing and smut-stirring."
-    }
+    collab1 = "Darlene Madison",
+    collab2 = "Sam"
 ],
 
 //////////////////////  Array - Awards
 
+awardTitle: "Freakin' Awesome Awards",
+
 "awards": [
-    {
-    name: "Woody for Best Erotic Album",
-    description: "Dewey won this award for his chart-topping album, 'Going down, Getting dirty'"
-    }
+    award1 = "Grammy for Best Album - 'Black Sheep'",
+    award2 = "Grammy for Best Single - 'Walk Hard'"
 ]
 }
 
@@ -97,7 +111,12 @@ for(var i = 0; i < artistIntroJson.length; i++) {
 var artistSkills = document.getElementsByClassName("skills")[0];
 var artistSkillsJson = careerJSONData.skills;
 
+var skillsTitle = document.createElement("h2");
+skillsTitle.innerHTML = artistSkillsJson.skillTitle;
+artistSkills.appendChild(skillsTitle);
+
 for(var i = 0; i < artistSkillsJson.length; i++) {
+
 
     var skillsFireName = document.createElement("h4");
     skillsFireName.innerHTML = artistSkillsJson[i].name;
@@ -113,7 +132,12 @@ for(var i = 0; i < artistSkillsJson.length; i++) {
 var artistPublished = document.getElementsByClassName("pub")[0];
 var artistPubJson = careerJSONData.published;
 
+var publishedTitle = document.createElement("h2");
+publishedTitle.innerHTML = artistPubJson.pubTitle;
+artistPublished.appendChild(publishedTitle);
+
 for(var i = 0; i < artistPubJson.length; i++) {
+
 
     var publishedNameHotter = document.createElement("h4");
     publishedNameHotter.innerHTML = artistPubJson[i].name;
@@ -127,16 +151,21 @@ for(var i = 0; i < artistPubJson.length; i++) {
 //////////////////////  Populate HTML w/JSON.residence
 
 var artistResidence = document.getElementsByClassName("res")[0];
-var artResJson = careerJSONData.residence;
+var artistResJson = careerJSONData.residence;
 
-for(var i = 0; i < artResJson.length; i++) {
+var residenceTitle = document.createElement("h2");
+residenceTitle.innerHTML = artistResJson.resTitle;
+artistResidence.appendChild(residenceTitle);
+
+for(var i = 0; i < artistResJson.length; i++) {
+
 
     var resMauiName = document.createElement("h4");
-    resMauiName.innerHTML = artResJson[i].name;
+    resMauiName.innerHTML = artistResJson[i].name;
     artistResidence.appendChild(resMauiName);
 
     var resMauiDescription = document.createElement("p");
-    resMauiDescription.innerHTML = artResJson[i].description;
+    resMauiDescription.innerHTML = artistResJson[i].description;
     artistResidence.appendChild(resMauiDescription);
 }
 
@@ -145,7 +174,12 @@ for(var i = 0; i < artResJson.length; i++) {
 var artistCollab = document.getElementsByClassName("collab")[0];
 var artistCollabJson = careerJSONData.collaborators;
 
+var collaboratorsTitle = document.createElement("h2");
+collaboratorsTitle.innerHTML = artistCollabJson.collabTitle;
+artistCollab.appendChild(collaboratorsTitle);
+
 for(var i = 0; i < artistCollabJson.length; i++) {
+
 
     var collabJoanName = document.createElement("h4");
     collabJoanName.innerHTML = artistCollabJson[i].name;
@@ -159,9 +193,14 @@ for(var i = 0; i < artistCollabJson.length; i++) {
 //////////////////////  Populate HTML w/JSON.awards
 
 var artistAwards = document.getElementsByClassName("awards")[0];
-var artistAwardsJson = careerJSONData.awards;
+var artistAwardsJson = careerJSONData.awardTitle;
+
+var awardsTitle = document.createElement("h2");
+awardsTitle.innerHTML = artistAwardsJson.title;
+artistAwards.appendChild(awardsTitle);
 
 for(var i = 0; i < artistAwardsJson.length; i++) {
+
 
     var awardsWoodyName = document.createElement("h4");
     awardsWoodyName.innerHTML = artistAwardsJson[i].name;
