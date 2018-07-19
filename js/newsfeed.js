@@ -55,8 +55,6 @@ saveNewsBase(news, "News")
 
 const newsJSONdata =loadNewsData("News")
 
-console.log(news)
-
 var newsRecap = document.getElementsByClassName("news")[0];
 var items = newsJSONdata;
 
