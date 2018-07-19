@@ -2,7 +2,7 @@
 
 const news = [{
     event: "New album release",
-    date: "July 20th at 10",
+    date: "July 20th at 10am",
     location: "Nashville",
     type: "concert",
     collaborators: "Brenda Long",
@@ -11,7 +11,7 @@ const news = [{
 },
 {    
     event: "Dewey walks in on drug usage in batchroom",
-    date: "Back in the day",
+    date: "Someday last October",
     location: "Memphis",
     type: "concert",
     collaborators: "Tim Meadows",
@@ -21,7 +21,7 @@ const news = [{
 },
     {
     event: "Dewey cuts his big brother in 2",
-    date: "Flashback",
+    date: "40 years ago",
     location: "Barn",
     type: "accident",
     collaborators: "slingblade",
@@ -31,7 +31,7 @@ const news = [{
 },
 {
     event: "Dewek drives tractor in water",
-    date: "Thursday",
+    date: "Last Thursday",
     location: "Lake",
     type: "plunge",
     collaborators: "gravity",
@@ -60,10 +60,15 @@ console.log(news)
 var newsRecap = document.getElementsByClassName("news")[0];
 var items = newsJSONdata;
 
+// one big for loop
 for(var i = 0; i < items.length; i++) {
     var h2 = document.createElement("h2");
     h2.innerHTML = items[i].event;
     newsRecap.appendChild(h2);
     var p = document.createElement("p");
     p.innerHTML = items[i].date;
-    newsRecap.appendChild(p);}
+    newsRecap.appendChild(p);
+    var p = document.createElement("p");
+    p.innerHTML = items[i].rating;
+    newsRecap.appendChild(p);
+}
