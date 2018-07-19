@@ -30,7 +30,7 @@ const news = [{
   
 },
 {
-    event: "Dewek drives tractor in water",
+    event: "Dewey drives tractor in water",
     date: "Last Thursday",
     location: "Lake",
     type: "plunge",
@@ -68,7 +68,7 @@ for(var i = 0; i < items.length; i++) {
     h2.className="eventHead, jumbotron jumbotron-fluid";
 
     var p = document.createElement("p");
-    p.className="newsP, lead"
+    p.className="newsP, lead, dropdown"
     p.innerHTML = items[i].date;
     newsRecap.appendChild(p);
 
@@ -92,4 +92,3 @@ for(var i = 0; i < items.length; i++) {
     p.innerHTML = items[i].collaborators;
     newsRecap.appendChild(p);
 }
-
