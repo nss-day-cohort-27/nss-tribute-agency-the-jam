@@ -27,10 +27,22 @@ skills: [
 pubTitle: "Published Works",
 
 published: [
-    "Walk Hard",
-    "Black Sheep",
-    "(For Christmas) The People Want Cox",
-    "Let's Duet"
+    {
+    name: "Walk Hard",
+    img: "walk-hard.jpg"
+    },
+    {
+    name: "Black Sheep",
+    img: "black-sheep.jpg"
+    },
+    {
+    name: "(For Christmas) The People Want Cox",
+    img: "for-christmas.jpg"
+    },
+    {
+    name: "Let's Duet",
+    img: "lets-duet.jpg"
+    }
 ],
 
 //////////////////////  Array - Residence
@@ -131,11 +143,9 @@ artistPublished.innerHTML+=`
 
 for(var i = 0; i < artistPubJson.length; i++) {
 
-    
-    let pubItem = artistPubJson[i];
-
     artistPublished.innerHTML+=`
-    <h4 class="pubBody">${pubItem}</h4>`
+    <h4 class="pubBody">${artistPubJson[i].name}</h4>
+    <img src="images/${artistPubJson[i].img}">`
 
 }
 
