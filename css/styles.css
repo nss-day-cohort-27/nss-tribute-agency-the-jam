@@ -1,1 +1,28 @@
 /* Styles */
+.eventHead {
+    border: blue solid 4px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aqua;
+
+}
+
+#newshead {
+    text-align: center;
+}
+
+#newsPic {
+    display: block;
+    margin: auto;
+}
+
+#dewLink {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#dewButton {
+    display: block;
+    margin: auto;
+}
