@@ -1,4 +1,35 @@
 /* Styles */
+#personalMain {
+    border: black solid 2px;
+}
+
+.bgImage{
+    background-image: url("../images/woodbg.png");
+}
+.personalCard {
+    border: red solid 2px;
+}
+
+.personalFlex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.personalImg {
+    display: block;
+    margin: auto;
+}
+
+.personalName{
+    text-align: center;
+}
+
+.personalCardColor{
+    background-color: white;
+    margin: 1em;
+    padding: .5em;
+}
+
 .eventHead {
     border: blue solid 4px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
