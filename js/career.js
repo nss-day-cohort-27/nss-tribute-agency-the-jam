@@ -83,7 +83,7 @@ var artistIntroJson = careerJSONData.intro;
 
 for(var i = 0; i < artistIntroJson.length; i++) {
 
-    var introName = document.createElement("h3");
+    var introName = document.createElement("h4");
     introName.innerHTML = artistIntroJson[i].name;
     artistIntro.appendChild(introName);
 
@@ -99,7 +99,7 @@ var artistSkillsJson = careerJSONData.skills;
 
 for(var i = 0; i < artistSkillsJson.length; i++) {
 
-    var skillsFireName = document.createElement("h3");
+    var skillsFireName = document.createElement("h4");
     skillsFireName.innerHTML = artistSkillsJson[i].name;
     artistIntro.appendChild(skillsFireName);
 
@@ -115,7 +115,7 @@ var artistPubJson = careerJSONData.published;
 
 for(var i = 0; i < artistPubJson.length; i++) {
 
-    var publishedNameHotter = document.createElement("h3");
+    var publishedNameHotter = document.createElement("h4");
     publishedNameHotter.innerHTML = artistPubJson[i].name;
     artistPublished.appendChild(publishedNameHotter);
 
@@ -131,7 +131,7 @@ var artResJson = careerJSONData.residence;
 
 for(var i = 0; i < artResJson.length; i++) {
 
-    var resMauiName = document.createElement("h3");
+    var resMauiName = document.createElement("h4");
     resMauiName.innerHTML = artResJson[i].name;
     artistResidence.appendChild(resMauiName);
 
@@ -147,7 +147,7 @@ var artistCollabJson = careerJSONData.collaborators;
 
 for(var i = 0; i < artistCollabJson.length; i++) {
 
-    var collabJoanName = document.createElement("h3");
+    var collabJoanName = document.createElement("h4");
     collabJoanName.innerHTML = artistCollabJson[i].name;
     artistCollab.appendChild(collabJoanName);
 
@@ -163,7 +163,7 @@ var artistAwardsJson = careerJSONData.awards;
 
 for(var i = 0; i < artistAwardsJson.length; i++) {
 
-    var awardsWoodyName = document.createElement("h3");
+    var awardsWoodyName = document.createElement("h4");
     awardsWoodyName.innerHTML = artistAwardsJson[i].name;
     artistAwards.appendChild(awardsWoodyName);
 
