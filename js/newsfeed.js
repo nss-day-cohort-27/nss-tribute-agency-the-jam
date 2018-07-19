@@ -65,10 +65,14 @@ for(var i = 0; i < items.length; i++) {
     var h2 = document.createElement("h2");
     h2.innerHTML = items[i].event;
     newsRecap.appendChild(h2);
-    var p = document.createElement("p");
-    p.innerHTML = items[i].date;
+    var dateP = document.createElement("p");
+    newsP.className="newsP"
+
+    dateP.innerHTML = items[i].dateP;
     newsRecap.appendChild(p);
-    var p = document.createElement("p");
-    p.innerHTML = items[i].rating;
+    var ratingP = document.createElement("p");
+
+    ratingP.className="newsP"
+    ratingP.innerHTML = items[i].ratingP;
     newsRecap.appendChild(p);
 }
