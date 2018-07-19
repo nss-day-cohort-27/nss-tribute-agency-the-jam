@@ -2,7 +2,7 @@
 
 const news = [{
     event: "New album release",
-    date: "July 20th at 10am",
+    date: "July 20th at 3pm",
     location: "Nashville",
     type: "concert",
     collaborators: "Brenda Long",
@@ -80,6 +80,16 @@ for(var i = 0; i < items.length; i++) {
     var p = document.createElement("p");
     p.className="newsP, my-4"
     p.innerHTML = items[i].type;
+    newsRecap.appendChild(p);
+
+    var p = document.createElement("p");
+    p.className="newsP, my-4"
+    p.innerHTML = items[i].rating;
+    newsRecap.appendChild(p);
+
+    var p = document.createElement("p");
+    p.className="newsP, my-4"
+    p.innerHTML = items[i].collaborators;
     newsRecap.appendChild(p);
 }
 

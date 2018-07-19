@@ -5,3 +5,19 @@
     background-color: aqua;
 
 }
+
+#newshead {
+    text-align: center;
+}
+
+#newsPic {
+    display: block;
+    margin: auto;
+}
+
+#dewLink {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
