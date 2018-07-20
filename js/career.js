@@ -5,58 +5,81 @@ const career = {
 
 //////////////////////  Array - Intro
 
-"intro": [
+intro: [
     {
         name: "Dewey Cox",
-        description: "He does a lot of good arts, and makes all the people's happy."
+        description: "He does a lot of good arts, and makes all the peoples happy."
     }
 ],
 
 //////////////////////  Array - Skills
 
-"skills": [
-    {
-    name: "Fire Juggling",
-    description: "Master of the flaming baton."
-    }
+skillTitle: "Totally Awesome Skills",
+
+skills: [
+    "Singing",
+    "Playing guitar",
+    "Walking hard"
 ],
 
 //////////////////////  Array - Published
 
-"published": [
+pubTitle: "Published Works",
+
+published: [
     {
-    name: "Hotter than the Sun",
-    description: "Best-selling novel about recovering from a tragic fire-swallowing trick."
+    name: "Walk Hard",
+    img: "walk-hard.jpg"
+    },
+    {
+    name: "Black Sheep",
+    img: "black-sheep.jpg"
+    },
+    {
+    name: "(For Christmas) The People Want Cox",
+    img: "for-christmas.jpg"
+    },
+    {
+    name: "Let's Duet",
+    img: "lets-duet.jpg"
     }
 ],
 
 //////////////////////  Array - Residence
 
-"residence": [
+resTitle: "Places of Residence",
+
+residence: [
     {
-    name: "Hawaii Beachside Property",
-    description: "A small shack on the coast of Maui.",
-    beginTime: "1988",
-    endTime: "2001"
+    name: "Springberry, Alabama",
+    beginEnd: "1946-1953"
+    },
+    {
+    name: "Nashville, Tennessee",
+    beginEnd: "1954-1965"
+    },
+    {
+    name: "Berkeley, California",
+    beginEnd: "1966-2002"
     }
 ],
 
 //////////////////////  Array - Collaborators
 
-"collaborators": [
-    {
-    name: "Joan Rivera",
-    description: "Scandal artist that boosted his career with badmouthing and smut-stirring."
-    }
+collabTitle: "Known Collaborators",
+
+collaborators: [
+    "Darlene Madison",
+    "Sam"
 ],
 
 //////////////////////  Array - Awards
 
-"awards": [
-    {
-    name: "Woody for Best Erotic Album",
-    description: "Dewey won this award for his chart-topping album, 'Going down, Getting rough'"
-    }
+awardTitle: "Freakin' Amazing Awards",
+
+awards: [
+    "Grammy for Best Album - 'Black Sheep'",
+    "Grammy for Best Single - 'Walk Hard'"
 ]
 }
 
@@ -76,18 +99,123 @@ saveCareerData(career, "Career")
 
 const careerJSONData = loadCareerData("Career")
 
-//////////////////////  Populate HTML w/JSON
+//////////////////////  Populate HTML w/JSON.intro
 
-var artistIntro = document.getElementsByClassName("int")[0];
-var artIntro = careerJSONData.intro ; 
+var artistIntro = document.getElementsByClassName("intro")[0];
+var artistIntroJson = careerJSONData.intro;
 
-for(var i = 0; i < artIntro.length; i++) {
-    var h3 = document.createElement("h3");
-    h3.innerHTML = artIntro[i].name;
-    artistIntro.appendChild(h3);
-    var p = document.createElement("p");
-    p.innerHTML = artIntro[i].description;
-    artistIntro.appendChild(p);
+for(var i = 0; i < artistIntroJson.length; i++) {
+
+    let currentItem = artistIntroJson[i];
+
+    artistIntro.innerHTML+=`
+    <h1>${currentItem.name}</h1>
+    <h4>${currentItem.description}</h4>`
+}
+
+//////////////////////  Populate HTML w/JSON.skills
+
+var artistSkills = document.querySelector(".skills");
+var artistSkillsJson = careerJSONData.skills;
+var artistSkillsTitleJson = careerJSONData.skillTitle;
+
+artistSkills.innerHTML+=`
+<h2 class="skillsTitle">${artistSkillsTitleJson}</h2>`
+
+let finalSkills = `<div class='row'>`
+
+for(var i = 0; i < artistSkillsJson.length; i++) {
+
+    finalSkills +=`
+    <div class="col-lg-4 p-3">
+    <h4>${artistSkillsJson[i]}</h4>
+    </div>`
+
+}
+
+finalSkills += `</div>`
+artistSkills.innerHTML += finalSkills
+
+//////////////////////  Populate HTML w/JSON.published
+
+var artistPublished = document.getElementsByClassName("pub")[0];
+var artistPubJson = careerJSONData.published;
+var artistPubTitleJson = careerJSONData.pubTitle;
+
+artistPublished.innerHTML+=`
+<h2>${artistPubTitleJson}</h2>`
+
+let finalStructure = `<div class='row'>`
+
+for(var i = 0; i < artistPubJson.length; i++) {
+    if (i % 2 === 0) {
+        finalStructure += `</div>`
+        finalStructure += `<div class='row'>`
+    }
+    finalStructure +=`
+    <div class="col-6 p-3 shadow mx-auto border rounded">
+    <h4>${artistPubJson[i].name}</h4>
+    <img src="images/${artistPubJson[i].img}" width="250px" height="250px">
+    </div>`
+
+}
+finalStructure += `</div>` 
+artistPublished.innerHTML += finalStructure
+
+//////////////////////  Populate HTML w/JSON.residence
+
+var artistResidence = document.getElementsByClassName("res")[0];
+var artistResJson = careerJSONData.residence;
+var artistResTitleJson = careerJSONData.resTitle;
+
+artistResidence.innerHTML+=`
+<h2 class="p-3">${artistResTitleJson}</h2>`
+
+for(var i = 0; i < artistResJson.length; i++) {
+
+
+    var resName = document.createElement("h4");
+    resName.innerHTML = artistResJson[i].name;
+    artistResidence.appendChild(resName);
+
+    var resBeginEnd = document.createElement("h5");
+    resBeginEnd.innerHTML = artistResJson[i].beginEnd;
+    artistResidence.appendChild(resBeginEnd);
+}
+
+//////////////////////  Populate HTML w/JSON.collaborators
+
+var artistCollab = document.getElementsByClassName("collab")[0];
+var artistCollabJson = careerJSONData.collaborators;
+var artistCollabTitleJson = careerJSONData.collabTitle;
+
+artistCollab.innerHTML+=`
+<h2 class="p-3">${artistCollabTitleJson}</h2>`
+
+
+for(var i = 0; i < artistCollabJson.length; i++) {
+
+    let collabItem = artistCollabJson[i];
+
+    artistCollab.innerHTML+=`
+    <h4>${collabItem}</h4>`
+}
+
+//////////////////////  Populate HTML w/JSON.awards
+
+var artistAwards = document.getElementsByClassName("awards")[0];
+var artistAwardsJson = careerJSONData.awards;
+var artistAwardsTitleJson = careerJSONData.awardTitle;
+
+artistAwards.innerHTML+=`
+<h2 class="p-3">${artistAwardsTitleJson}</h2>`
+
+for(var i = 0; i < artistAwardsJson.length; i++) {
+
+    let awardsItem = artistAwardsJson[i];
+
+    artistAwards.innerHTML+=`
+    <h4>${awardsItem}</h4>`
 }
 
 
