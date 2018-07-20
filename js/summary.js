@@ -4,17 +4,22 @@ const summaryData = {
 "collaborators": [
 {
     name: "Joe Blow",
-    hometown: "Hopkinsville, KY",
+    hometown: "Maui, HI",
     age: "56"
 },
  {   name: "Susie Queue",
-     hometown: "Clarksville, TN",
+     hometown: "The Big Island, HI",
      age: "48" 
 },
 {
  name: "Mr. Trex",
- hometown: "Oak Grove, KY",
+ hometown: "Oahu, HI",
  age: "41"
+},
+{
+    name: "Joan Rivera",
+    hometown: "Maui, HI",
+    age: "42"
 }
 
 ],
@@ -26,14 +31,15 @@ const summaryData = {
     name: "Low-Blow-Joe"
     }
 ],
+
 "residence": [
     {
-        when: "raised in: ",
-        state: "Kentucky",
+        when: "Former Resident of: ",
+        state: "Maui, HI",
         country: "United States"
     },
     {
-        when: "currently:",
+        when: "Currently:",
         state: "buried",
         country: "underground"
 
@@ -65,6 +71,7 @@ const loadSummary = function (localStorageKey) {
     // Use JSON.parse() to convert the string back into an object
     return JSON.parse(summaryString)
 }
+    
 
 saveSummary(summaryData, "SummaryData")
 
@@ -79,16 +86,20 @@ let sumryart = summaryJsonData
 console.log(summaryData)
 console.log(sumryart.collaborators.length)
 
+let sumCollaborator = document.getElementsByClassName("collaborators")[0]
+
 for(let i = 0; i < sumryart.collaborators.length; i++){
     let h5 = document.createElement("h5");
-    h5.innerHTML = sumryart.collaborators[i].name + ", " + sumryart.collaborators[i].age + ", of " + sumryart.collaborators[i].hometown
-    artsummary.appendChild(h5)
-}
+    h5.innerHTML = sumryart.collaborators[i].name + ", " + sumryart.collaborators[i].age + ", of " + sumryart.collaborators[i].hometown;
+    sumCollaborator.appendChild(h5);
+}   
 
-let sumAlias = document.getElementsByClassName("aliases")[0]
+
 
 console.log(sumryart.aliases.length)
 console.log()
+
+let sumAlias = document.getElementsByClassName("aliases")[0]
 
 for(let i = 0; i < sumryart.aliases.length; i++){
     let h5 = document.createElement("h5");
@@ -101,6 +112,6 @@ console.log(sumryart.residence.length)
 
     for(let i = 0; i< sumryart.residence.length; i++){
         let h5 = document.createElement("h5");
-        h5.innerHTML = sumryart.residence[i].when + ", " + sumryart.residence[i].state + ", " + sumryart.residence[i].country
-        sumResidence.appendChild(h5)
+        h5.innerHTML = sumryart.residence[i].when + " " + sumryart.residence[i].state + ", " + sumryart.residence[i].country
+        sumResidence.appendChild(h5);
     }
