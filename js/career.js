@@ -154,7 +154,7 @@ for(var i = 0; i < artistPubJson.length; i++) {
         finalStructure += `<div class='row'>`
     }
     finalStructure +=`
-    <div class="col-6 p-3">
+    <div class="col-6 p-3 shadow mx-auto border rounded">
     <h4>${artistPubJson[i].name}</h4>
     <img src="images/${artistPubJson[i].img}" width="250px" height="250px">
     </div>`
