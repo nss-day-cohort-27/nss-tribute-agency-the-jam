@@ -23,7 +23,7 @@
     margin: auto;
 }
 .bgImage{
-    background-image: url("../images/woodbg.png");
+    background: url("../images/woodbg.png") repeat fixed;
 }
 .personalCard {
     border: red solid 2px;
