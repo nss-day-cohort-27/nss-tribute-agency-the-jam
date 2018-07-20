@@ -111,7 +111,6 @@ for(var i = 0; i < artistIntroJson.length; i++) {
     artistIntro.innerHTML+=`
     <h1>${currentItem.name}</h1>
     <h4>${currentItem.description}</h4>`
-
 }
 
 //////////////////////  Populate HTML w/JSON.skills
@@ -162,6 +161,7 @@ for(var i = 0; i < artistPubJson.length; i++) {
 }
 finalStructure += `</div>` 
 artistPublished.innerHTML += finalStructure
+
 //////////////////////  Populate HTML w/JSON.residence
 
 var artistResidence = document.getElementsByClassName("res")[0];
@@ -181,7 +181,6 @@ for(var i = 0; i < artistResJson.length; i++) {
     var resBeginEnd = document.createElement("h5");
     resBeginEnd.innerHTML = artistResJson[i].beginEnd;
     artistResidence.appendChild(resBeginEnd);
-
 }
 
 //////////////////////  Populate HTML w/JSON.collaborators
@@ -200,7 +199,6 @@ for(var i = 0; i < artistCollabJson.length; i++) {
 
     artistCollab.innerHTML+=`
     <h4>${collabItem}</h4>`
-
 }
 
 //////////////////////  Populate HTML w/JSON.awards
@@ -218,7 +216,6 @@ for(var i = 0; i < artistAwardsJson.length; i++) {
 
     artistAwards.innerHTML+=`
     <h4>${awardsItem}</h4>`
-   
 }
 
 
