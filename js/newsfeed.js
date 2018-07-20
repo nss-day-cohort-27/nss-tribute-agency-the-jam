@@ -1,7 +1,7 @@
 //related image, date, location, type of event, collaborators, and where the event occured or to purchase tickets.
 
 const news = [{
-    event: "New album release",
+    event: "Event: New album release",
     date: "July 20th at 3pm",
     location: "Nashville",
     type: "concert",
@@ -10,7 +10,7 @@ const news = [{
 
 },
 {    
-    event: "Dewey walks in on drug usage in batchroom",
+    event: "Event: Dewey walks in on drug usage in batchroom",
     date: "Someday last October",
     location: "Memphis",
     type: "concert",
@@ -20,7 +20,7 @@ const news = [{
 
 },
     {
-    event: "Dewey cuts his big brother in 2",
+    event: "Event: Dewey cuts his big brother in 2",
     date: "40 years ago",
     location: "Barn",
     type: "accident",
@@ -30,7 +30,7 @@ const news = [{
   
 },
 {
-    event: "Dewey drives tractor in water",
+    event: "Event: Dewey drives tractor in water",
     date: "Last Thursday",
     location: "Lake",
     type: "plunge",
@@ -65,28 +65,28 @@ for(var i = 0; i < items.length; i++) {
     newsRecap.appendChild(h2);
     h2.className="eventHead, jumbotron jumbotron-fluid";
 
-    var p = document.createElement("p");
-    p.className="newsP, lead, dropdown"
-    p.innerHTML = items[i].date;
-    newsRecap.appendChild(p);
+    var h4 = document.createElement("h4");
+    h4.className="newsPic, lead, dropdown, list-group-item"
+    h4.innerHTML = items[i].date;
+    newsRecap.appendChild(h4);
 
     var p = document.createElement("p");
-    p.className="newsP, my-4"
+    p.className="newsPic, my-4"
     p.innerHTML = items[i].location;
     newsRecap.appendChild(p);
 
     var p = document.createElement("p");
-    p.className="newsP, my-4"
+    p.className="newsPic, my-4"
     p.innerHTML = items[i].type;
     newsRecap.appendChild(p);
 
     var p = document.createElement("p");
-    p.className="newsP, my-4"
+    p.className="newsPic, my-4"
     p.innerHTML = items[i].rating;
     newsRecap.appendChild(p);
 
     var p = document.createElement("p");
-    p.className="newsP, my-4"
+    p.className="newsPic, my-4"
     p.innerHTML = items[i].collaborators;
     newsRecap.appendChild(p);
 }
