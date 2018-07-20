@@ -123,14 +123,19 @@ var artistSkillsTitleJson = careerJSONData.skillTitle;
 artistSkills.innerHTML+=`
 <h2 class="skillsTitle">${artistSkillsTitleJson}</h2>`
 
+let finalSkills = `<div class='row'>`
+
 for(var i = 0; i < artistSkillsJson.length; i++) {
 
-    let skillsItem = artistSkillsJson[i];
-
-    artistSkills.innerHTML+=`
-    <h4>${skillsItem}</h4>`
+    finalSkills +=`
+    <div class="col-lg-4 p-3">
+    <h4>${artistSkillsJson[i]}</h4>
+    </div>`
 
 }
+
+finalSkills += `</div>`
+artistSkills.innerHTML += finalSkills
 
 //////////////////////  Populate HTML w/JSON.published
 
@@ -149,7 +154,7 @@ for(var i = 0; i < artistPubJson.length; i++) {
         finalStructure += `<div class='row'>`
     }
     finalStructure +=`
-    <div class="col-6">
+    <div class="col-6 p-3">
     <h4>${artistPubJson[i].name}</h4>
     <img src="images/${artistPubJson[i].img}" width="250px" height="250px">
     </div>`
@@ -164,7 +169,7 @@ var artistResJson = careerJSONData.residence;
 var artistResTitleJson = careerJSONData.resTitle;
 
 artistResidence.innerHTML+=`
-<h2>${artistResTitleJson}</h2>`
+<h2 class="p-3">${artistResTitleJson}</h2>`
 
 for(var i = 0; i < artistResJson.length; i++) {
 
@@ -173,7 +178,7 @@ for(var i = 0; i < artistResJson.length; i++) {
     resName.innerHTML = artistResJson[i].name;
     artistResidence.appendChild(resName);
 
-    var resBeginEnd = document.createElement("h6");
+    var resBeginEnd = document.createElement("h5");
     resBeginEnd.innerHTML = artistResJson[i].beginEnd;
     artistResidence.appendChild(resBeginEnd);
 
@@ -186,7 +191,7 @@ var artistCollabJson = careerJSONData.collaborators;
 var artistCollabTitleJson = careerJSONData.collabTitle;
 
 artistCollab.innerHTML+=`
-<h2>${artistCollabTitleJson}</h2>`
+<h2 class="p-3">${artistCollabTitleJson}</h2>`
 
 
 for(var i = 0; i < artistCollabJson.length; i++) {
@@ -205,7 +210,7 @@ var artistAwardsJson = careerJSONData.awards;
 var artistAwardsTitleJson = careerJSONData.awardTitle;
 
 artistAwards.innerHTML+=`
-<h2>${artistAwardsTitleJson}</h2>`
+<h2 class="p-3">${artistAwardsTitleJson}</h2>`
 
 for(var i = 0; i < artistAwardsJson.length; i++) {
 
