@@ -5,7 +5,8 @@ const person = {
     name: "Dewford Randolph Cox",
     died: "2007",
     currentCountry: "United States of America",
-    family: ["Pa Cox", "Ma Cox", "Edith Cox", "Darlene Madison", "Cheryl Tiegs"],
+    family: ["Pa Cox", "Ma Cox", "Edith Cox (1953-1956)", "Darlene Madison(1956-1974) (1992-2007)", "Cheryl Tiegs (1976-1983)", "A whole bunch", "Dewey Jr., Deweyna & 35 More", "Miles the Monkey and a Giraffe"],
+
 }
 
 
