@@ -34,7 +34,7 @@ const summaryData = {
 
 "residence": [
     {
-        when: "Former Resident of: ",
+        when: "Former Resident ",
         state: "Maui, HI",
         country: "United States"
     },
@@ -44,7 +44,18 @@ const summaryData = {
         country: "underground"
 
     }
-]
+],
+
+    "whyDewey": [
+        {
+        sumWhy: "We heard him sing about walking hard...and we learned a little something about how we wanted to walk. What do we think about when we think about Cox?"
+        },
+   
+        {
+        sumWhy: "He's been called the Drifter. Also the Shape Shifter, the Master Chef, the Chameleon.The Problem Child. The Hard One. The White Indian. The Giant Midget."
+        },
+        {sumWhy: "If Elvis and Buddy Holly are the Cain and Abel of rock 'n' roll and Bruce Springsteen is Zechariah...Iggy Pop is Methuselah, and, of course, Neil Young is the wise prophet Ezekiel, then what does that make Dewey Cox?"
+        }]
 }
 
 
@@ -71,17 +82,17 @@ const loadSummary = function (localStorageKey) {
     // Use JSON.parse() to convert the string back into an object
     return JSON.parse(summaryString)
 }
-    
 
 saveSummary(summaryData, "SummaryData")
 
 const summaryJsonData = loadSummary("SummaryData")
+let sumryart = summaryJsonData 
 
 
-// document.write(JSON.localStorage.summaryData.stringifiedSummaryData)
+
+
 
 let artsummary = document.getElementsByClassName("summaryArticle")[0]
-let sumryart = summaryJsonData 
 
 console.log(summaryData)
 console.log(sumryart.collaborators.length)
@@ -115,3 +126,14 @@ console.log(sumryart.residence.length)
         h5.innerHTML = sumryart.residence[i].when + " " + sumryart.residence[i].state + ", " + sumryart.residence[i].country
         sumResidence.appendChild(h5);
     }
+
+
+//     /////////////////////////
+let whywhy = document.getElementsByClassName("whyDewey")[0]
+
+for(let i =0; i < sumryart.whyDewey.length; i++){
+    let h5 = document.createElement("h5");
+    h5.className = "blurb"
+    h5.innerHTML =sumryart.whyDewey[i].sumWhy
+    whywhy.appendChild(h5);
+}

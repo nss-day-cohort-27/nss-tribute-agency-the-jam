@@ -18,3 +18,51 @@
     text-decoration: none;
     align-content: center;
   }
+
+  .span2{
+    /* margin-top: 1em; */
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+ 
+  }
+  .span3{
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-right: 1m;
+    padding-left: 1em;
+
+
+  .span4{
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-right: 1em;
+    
+  }
+.span5{
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-right: 2em;  
+  padding-right: 2em;
+}
+.span6{
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-right: 1em;
+}
+.span7{
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-right: 1em;
+}
+.whyDewey{
+  width: 80%;
+  margin: 20px;
+  margin-left: 5em;
+  padding: 2em;
+}
