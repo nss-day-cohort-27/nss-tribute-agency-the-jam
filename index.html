@@ -1,79 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">   
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/summary.css">
+  <title>NSSTA Summary</title>
 </head>
+
 <body>
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  
-                <a class="navbar-brand" href="index.html">HOME</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+  <div class="nssta">
+    <img src="images/nssta.jpg" alt="nssta logo">
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light shadow navStyle">
 
-                <a class="navbar-brand" href="career.html">CAREER</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+    <a class="navbar-brand" href="index.html">HOME</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-
-                <a class="navbar-brand" href="newsfeed.html">NEWS FEED</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <a class="navbar-brand" href="personal.html">PERSONAL</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                </div>
-              </nav>    
-              <div class="container-fluid">
-
-                <article id ="collaborators"><h2> Collaborators</h2><br> </article>
-               
-                <img src="images/DCpic.jpg" class="media" alt="Dewey Cox">
-                <!--                   <
-    Known 
-                    Known collaborators with the artist.
-                    A portrait of the artist. This component should have a photo and name.
-                    List of known aliases.
-                    Country of residence. -->
-                    ...
-                  </div>
+    <a class="navbar-brand" href="career.html">CAREER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 
-                  <div>
-                    <article>
+    <a class="navbar-brand" href="newsfeed.html">NEWS FEED</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-                    </article>
-                  </div>
-                  <style>
-                      .footer {
-                          position: fixed;
-                          left: 0;
-                          bottom: 0;
-                          width: 100%;
-                          background-color: lightblue;
-                          color: black;
-                          text-align: center;
-                          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                      }
-                      </style>
-                      
-                      <div class="footer">
-                        <p> Dewey Cox &copy;2018 &middot;<a href="http://nashvillesoftwareschool.com/"> NSS &middot;
-                           </a> Follow Dewey on <a href="https://www.facebook.com/sling.blade.1865">Facebook</a></p>
-                      </div>
-
+    <a class="navbar-brand" href="personal.html">PERSONAL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     </div>
-    <script src="js/summary.js"</script></script>
-    <link rel="stylesheet" src="css/styles.css">
-   
+  </nav>
+  <div class="concert">
+    <img src="images/concert.jpg" alt="concert-image">
+  </div>
+
+  <div class="bgImage">
+
+    <div class="container-fluid">
+      <div class="row">
+
+       <div class="span2">
+          <img src="images/DCpic.jpg" alt="Dewey Cox" title="Dewey Cox">
+          <div class="container-fluid">
+            <article>
+              <h2>Dewey Cox</h2>
+            </article>
+          </div>
+          </div>
+
+
+          <div class="row">
+
+            <div class="span2">
+              <article>
+                <h2>Aliases</h2>
+                <section class="aliases"></section>            
+              </article>
+            </div>
+            
+            <div class="span6">
+              <article>
+                  <h2>Collaborators</h2>
+                  <section class="collaborators"></section>
+              </article>
+            </div>
+            <div class="span2">
+              <article>
+                  <h2>Residence</h2>
+                  <section class="residence"></section>
+          </article>
+        </div>
+      </div>
+      <div class="row">
+        <div class ="span7">
+          <section class="whyDewey">  
+
+          </section>
+        </div>
+      </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+  <script src="js/summary.js"></script>
 </body>
+
+<footer class="footer">
+    <p> Dewey Cox &copy;2018 &middot;<a href="http://nashvillesoftwareschool.com/"> NSS &middot;
+       </a> Follow Dewey on <a href="https://www.facebook.com/sling.blade.1865">Facebook</a></p>
+      </footer>
 </html>
