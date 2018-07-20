@@ -1,16 +1,16 @@
 //related image, date, location, type of event, collaborators, and where the event occured or to purchase tickets.
 
 const news = [{
-    event: "New album release",
-    date: "July 20th at 3pm",
+    event: "New CD release - Back from the Dead",
+    date: "July 20th at 4pm",
     location: "Nashville",
     type: "concert",
     collaborators: "Brenda Long",
-    rating: "7 out of 10",
+    rating: "11 out of 10",
 
 },
 {    
-    event: "Dewey walks in on drug usage in batchroom",
+    event: "Dewey walks in on drug usage in bathroom",
     date: "Someday last October",
     location: "Memphis",
     type: "concert",
@@ -23,15 +23,15 @@ const news = [{
     event: "Dewey cuts his big brother in 2",
     date: "40 years ago",
     location: "Barn",
-    type: "accident",
-    collaborators: "slingblade",
+    type: "accident, The wrong kid died",
+    collaborators: "the slingblade",
     rating: "9 out of 10. That was funny. No way he would have still been alive",
     tickets: "Doubtful"
   
 },
 {
-    event: "Dewek drives tractor in water",
-    date: "Last Thursday",
+    event: "Dewey drives tractor in water",
+    date: "That one part in the movie",
     location: "Lake",
     type: "plunge",
     collaborators: "gravity",
@@ -55,41 +55,39 @@ saveNewsBase(news, "News")
 
 const newsJSONdata =loadNewsData("News")
 
-console.log(news)
-
 var newsRecap = document.getElementsByClassName("news")[0];
 var items = newsJSONdata;
 
 // one big for loop
 for(var i = 0; i < items.length; i++) {
     var h2 = document.createElement("h2");
-    h2.innerHTML = items[i].event;
+    h2.innerHTML = `Event: ${items[i].event}`;
     newsRecap.appendChild(h2);
-    h2.className="eventHead, jumbotron jumbotron-fluid";
+    h2.className="eventHead";
 
-    var p = document.createElement("p");
-    p.className="newsP, lead"
-    p.innerHTML = items[i].date;
-    newsRecap.appendChild(p);
+    var h4 = document.createElement("h4");
+    h4.className="badge badge-light"
+    h4.innerHTML = `Date: ${items[i].date}`;
+    newsRecap.appendChild(h4);
 
-    var p = document.createElement("p");
-    p.className="newsP, my-4"
-    p.innerHTML = items[i].location;
-    newsRecap.appendChild(p);
+    var h4 = document.createElement("h4");
+    h4.className="newsPic, my-4"
+    h4.innerHTML =`Where at? ${items[i].location}`;
+    newsRecap.appendChild(h4);
 
-    var p = document.createElement("p");
-    p.className="newsP, my-4"
-    p.innerHTML = items[i].type;
-    newsRecap.appendChild(p);
+    var h4 = document.createElement("h4");
+    h4.className="newsPic, my-4"
+    h4.innerHTML = `Type of event: ${items[i].type}`;
+    newsRecap.appendChild(h4);
 
-    var p = document.createElement("p");
-    p.className="newsP, my-4"
-    p.innerHTML = items[i].rating;
-    newsRecap.appendChild(p);
+    var r = document.createElement("r");
+    id="rating";
+    r.className="newsPic, my-4"
+    r.innerHTML = `Event rating: ${items[i].rating}`;
+    newsRecap.appendChild(r);
 
-    var p = document.createElement("p");
-    p.className="newsP, my-4"
-    p.innerHTML = items[i].collaborators;
-    newsRecap.appendChild(p);
+    var r = document.createElement("r");
+    r.className="newsPic, my-4"
+    r.innerHTML = `WITH SPECIAL GUEST: ${items[i].collaborators}`;
+    newsRecap.appendChild(r);
 }
-

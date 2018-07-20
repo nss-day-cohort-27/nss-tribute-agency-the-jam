@@ -50,9 +50,9 @@
 }
 
 .eventHead {
-    border: blue solid 4px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: aqua;
+    border: black 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
 
 }
 
@@ -77,6 +77,39 @@
     margin: auto;
 }
 
+#facebook {
+    margin: auto;
+}
 .navStyle {
     background-color: sandybrown;
+}
+
+#marquee {
+    font: outline;
+    display: block;
+    color: rgb(237, 9, 24);
+}
+
+.rating {
+    color: blue;
+}
+
+
+.footer {
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: lightcyan;
+    color: black;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.m-4 {
+    opacity: 90%;
+}
+
+.eventHead {
+    opacity: 70%;
 }
