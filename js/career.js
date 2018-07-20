@@ -141,22 +141,22 @@ var artistPubTitleJson = careerJSONData.pubTitle;
 artistPublished.innerHTML+=`
 <h2>${artistPubTitleJson}</h2>`
 
-let finalStructure = "<div class='row'>"
+let finalStructure = `<div class='row'>`
 
 for(var i = 0; i < artistPubJson.length; i++) {
     if (i % 2 === 0) {
-        finalStructure += "</div>"
-        finalStructure += "<div class='row'>"
+        finalStructure += `</div>`
+        finalStructure += `<div class='row'>`
     }
-    artistPublished.innerHTML+=`
-    <div class = "col-6">
+    finalStructure +=`
+    <div class="col-6">
     <h4>${artistPubJson[i].name}</h4>
     <img src="images/${artistPubJson[i].img}" width="250px" height="250px">
     </div>`
-    finalStructure += "</div>"
 
 }
-
+finalStructure += `</div>` 
+artistPublished.innerHTML += finalStructure
 //////////////////////  Populate HTML w/JSON.residence
 
 var artistResidence = document.getElementsByClassName("res")[0];
